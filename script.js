@@ -328,8 +328,8 @@ document.addEventListener('DOMContentLoaded', () => {
     2: { name: 'Ritmo 08', sessions: '8 acessos por mês', price: '259', note: 'Espaço suficiente para o treino conviver com uma rotina que está começando.' },
     3: { name: 'Ritmo 12', sessions: '12 acessos por mês', price: '329', note: 'Ritmo ideal para construir consistência sem sobrecarregar a agenda.' },
     4: { name: 'Ritmo 16', sessions: '16 acessos por mês', price: '389', note: 'Frequência sólida para alternar força, fôlego e recuperação toda semana.' },
-    5: { name: 'Pulso livre', sessions: 'Acesso livre mensal', price: '449', note: 'Alta frequência com liberdade para recalibrar a sessão todos os dias.' },
-    6: { name: 'Pulso livre+', sessions: 'Acesso livre + 1 convidado', price: '519', note: 'Para quem transformou movimento em parte essencial da própria rotina.' }
+    5: { name: 'GLFIT Livre', sessions: 'Acesso livre mensal', price: '449', note: 'Alta frequência com liberdade para recalibrar a sessão todos os dias.' },
+    6: { name: 'GLFIT Livre+', sessions: 'Acesso livre + 1 convidado', price: '519', note: 'Para quem transformou movimento em parte essencial da própria rotina.' }
   };
   const range = document.getElementById('frequency-range');
   const updatePlan = () => {
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     range.style.setProperty('--range', `${((value - 2) / 4) * 100}%`);
     document.getElementById('frequency-value').textContent = value;
     document.getElementById('frequency-note').textContent = plan.note;
-    document.getElementById('plan-code').textContent = value < 5 ? `RITMO / ${String(value).padStart(2, '0')}` : 'LIVRE / ∞';
+    document.getElementById('plan-code').textContent = value < 5 ? `RITMO / ${String(value).padStart(2, '0')}` : 'GLFIT / ∞';
     document.getElementById('plan-name').textContent = plan.name;
     document.getElementById('plan-sessions').textContent = plan.sessions;
     document.getElementById('plan-price').textContent = plan.price;
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (valid) {
       trialForm.classList.add('is-success');
-      showToast('Primeiro PULSO solicitado.');
+      showToast('Primeira experiência GLFIT solicitada.');
     } else trialForm.querySelector('.is-invalid input, .is-invalid select')?.focus();
   });
   trialForm.querySelectorAll('input, select').forEach((field) => field.addEventListener('input', () => field.closest('.field').classList.remove('is-invalid')));
