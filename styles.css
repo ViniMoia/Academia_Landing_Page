@@ -59,7 +59,7 @@ h3{font-size:clamp(2.8rem,5vw,4.7rem);line-height:.86}
 .nav-shell{position:relative;width:min(92rem,calc(100vw - 2rem));height:4.35rem;margin:auto;padding:.55rem .65rem .55rem 1.15rem;display:flex;align-items:center;gap:2rem;border:1px solid rgba(231,230,226,.13);border-radius:999px;background:rgba(4,21,20,.68);box-shadow:0 12px 40px rgba(0,0,0,.22);backdrop-filter:blur(18px) saturate(125%);pointer-events:auto;transition:background .35s,border-color .35s,transform .5s var(--ease-out)}
 .site-header.scrolled .nav-shell{background:rgba(4,21,20,.94);border-color:rgba(231,230,226,.22)}
 .brand{display:inline-flex;align-items:center;gap:.75rem;min-width:max-content}
-.brand-logo{width:2.45rem;height:2.45rem;border-radius:50%;object-fit:cover;flex-shrink:0;background:#000;border:1px solid rgba(250,49,57,.35);box-shadow:0 0 16px rgba(250,49,57,.28);transition:transform .35s var(--ease-snap),box-shadow .35s,border-color .35s}
+.brand-logo{width:2.75rem;height:2.75rem;border-radius:50%;object-fit:cover;flex-shrink:0;background:#000;border:1px solid rgba(250,49,57,.35);box-shadow:0 0 16px rgba(250,49,57,.28);transition:transform .35s var(--ease-snap),box-shadow .35s,border-color .35s}
 .brand:hover .brand-logo{transform:scale(1.08) rotate(4deg);border-color:rgba(250,49,57,.7);box-shadow:0 0 24px rgba(250,49,57,.55)}
 .brand-mark{position:relative;width:2.25rem;aspect-ratio:1;display:grid;place-items:center;border:1px solid rgba(231,230,226,.25);border-radius:50%;overflow:hidden}
 .brand-mark::before{content:"";position:absolute;inset:4px;border:1px solid rgba(250,49,57,.55);border-radius:50%;animation:spin 7s linear infinite}
