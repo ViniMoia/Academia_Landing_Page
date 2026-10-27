@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#041514">
+  <meta name="description" content="PULSO — treino orientado por leitura, método e progressão. Uma experiência de academia além da repetição.">
+  <title>PULSO — Treino que responde a você</title>
+  <link rel="preload" href="assets/fonts/formula-black.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/helvetica-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/images/hero-poster.avif" as="image" type="image/avif">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-orbit" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-shell" aria-label="Navegação principal">
+      <a class="brand magnetic" href="#inicio" aria-label="PULSO — início">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">PULSO</span>
+      </a>
+      <div class="nav-links" aria-label="Seções">
+        <a href="#leitura">Seu treino</a>
+        <a href="#metodo">Método</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#planos">Planos</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button button-primary button-small magnetic" href="#primeiro-pulso">
+          Experimentar <span class="button-icon"><i data-lucide="arrow-up-right"></i></span>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#leitura"><span>01</span> Seu treino</a>
+      <a href="#metodo"><span>02</span> Método</a>
+      <a href="#agenda"><span>03</span> Agenda</a>
+      <a href="#planos"><span>04</span> Planos</a>
+      <a class="button button-primary" href="#primeiro-pulso">Agendar experiência <i data-lucide="arrow-right"></i></a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-media" aria-hidden="true">
+        <video id="hero-video" muted loop playsinline poster="assets/images/hero-poster.avif">
+          <source src="assets/video/pulso-hero.mp4" type="video/mp4">
+        </video>
+        <img class="hero-mobile-image" src="assets/images/hero-mobile.webp" alt="Atleta realizando treino de força na academia">
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-kicker reveal">
+          <span class="live-dot"></span>
+          <span>Performance humana / São Paulo</span>
+        </div>
+        <h1 class="hero-title" id="hero-title" aria-label="Seu corpo fala. A gente lê.">
+          <span class="title-line"><span>Seu corpo</span></span>
+          <span class="title-line title-outline"><span>fala.</span></span>
+          <span class="title-line title-signal"><span>A gente lê.</span></span>
+        </h1>
+        <div class="hero-bottom reveal">
+          <p>Treino de força, fôlego e mobilidade ajustado à sua energia real — todos os dias.</p>
+          <div class="hero-actions">
+            <a class="button button-primary magnetic" href="#leitura">Descobrir meu pulso <span class="button-icon"><i data-lucide="arrow-down"></i></span></a>
+            <button class="video-control" id="video-control" type="button" aria-label="Pausar vídeo">
+              <span class="video-control-icon"><i data-lucide="pause"></i></span>
+              <span data-video-label>Pausar atmosfera</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pulse-console reveal" aria-label="Leitura de intensidade ao vivo">
+        <div class="console-top"><span>Live / Studio 01</span><span class="console-time">--:--:--</span></div>
+        <div class="bpm-row">
+          <span class="bpm-value" data-bpm>128</span>
+          <span class="bpm-unit">BPM<br><small>zona 04</small></span>
+        </div>
+        <div class="pulse-bars" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="console-foot"><span>Potência</span><strong>84%</strong></div>
+      </div>
+
+      <div class="hero-hud" aria-hidden="true">
+        <span>23.5505° S / 46.6333° W</span>
+        <span class="hero-scroll"><i></i> Role para calibrar</span>
+        <span>PULSO OS / 02.6</span>
+      </div>
+    </section>
+
+    <div class="kinetic-strip" aria-hidden="true">
+      <div class="kinetic-track">
+        <div>FORÇA <i></i> FÔLEGO <i></i> MOBILIDADE <i></i> PRESENÇA <i></i> PROGRESSÃO <i></i></div>
+        <div>FORÇA <i></i> FÔLEGO <i></i> MOBILIDADE <i></i> PRESENÇA <i></i> PROGRESSÃO <i></i></div>
+      </div>
+    </div>
+
+    <section class="section reading" id="leitura" aria-labelledby="reading-title">
+      <div class="section-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-header reveal-group">
+          <div>
+            <div class="eyebrow reveal-child"><span></span> 01 — Leitura do dia</div>
+            <h2 id="reading-title" class="reveal-child">Você não chega<br><span class="outline">igual todo dia.</span></h2>
+          </div>
+          <p class="section-intro reveal-child">Seu treino também não deveria. Escolha como você chegou; a PULSO mostra o estímulo certo para hoje.</p>
+        </header>
+
+        <div class="reading-stage reveal">
+          <div class="reading-controls" role="tablist" aria-label="Como você chegou hoje?">
+            <button class="state-tab is-active" type="button" role="tab" aria-selected="true" data-state="potencia">
+              <span class="state-index">01</span><span class="state-copy"><strong>Quero potência</strong><small>Energia alta · carga progressiva</small></span><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state="folego">
+              <span class="state-index">02</span><span class="state-copy"><strong>Quero fôlego</strong><small>Ritmo médio · intensidade variável</small></span><i data-lucide="arrow-up-right"></i>
+            </button>
+            <button class="state-tab" type="button" role="tab" aria-selected="false" data-state="fluxo">
+              <span class="state-index">03</span><span class="state-copy"><strong>Quero fluxo</strong><small>Energia baixa · controle e amplitude</small></span><i data-lucide="arrow-up-right"></i>
+            </button>
+          </div>
+
+          <article class="prescription-card tilt-card spotlight" id="prescription-card">
+            <div class="prescription-media"><img id="prescription-image" src="assets/images/forca.avif" alt="Atleta em treino de força"></div>
+            <div class="prescription-shade"></div>
+            <div class="prescription-top"><span class="status-badge"><i></i> Prescrição ativa</span><span id="prescription-code">PWR / 45</span></div>
+            <div class="prescription-content">
+              <p class="mono" id="prescription-label">Força / Lower body</p>
+              <h3 id="prescription-title">Base bruta.</h3>
+              <p id="prescription-description">Movimentos compostos, carga guiada e pausas precisas para construir força sem desperdiçar energia.</p>
+              <div class="prescription-metrics">
+                <span><small>Duração</small><strong id="metric-duration">45 min</strong></span>
+                <span><small>Intensidade</small><strong id="metric-intensity">Alta</strong></span>
+                <span><small>Vagas agora</small><strong id="metric-spots">06</strong></span>
+              </div>
+              <button class="button button-primary magnetic" type="button" data-book data-class="Base bruta" data-time="Hoje, 18:30">Reservar este treino <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method" id="metodo" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section-header reveal-group">
+          <div>
+            <div class="eyebrow reveal-child"><span></span> 02 — Método adaptativo</div>
+            <h2 id="method-title" class="reveal-child">Não é motivação.<br><span class="gradient-text">É método.</span></h2>
+          </div>
+          <p class="section-intro reveal-child">Um ciclo simples, repetido com inteligência: entender o agora, aplicar a dose certa e tornar evolução visível.</p>
+        </header>
+
+        <div class="method-steps">
+          <article class="method-step spotlight reveal" tabindex="0">
+            <div class="step-meta"><span>01</span><i data-lucide="scan-line"></i></div>
+            <div class="step-word">LER</div>
+            <div class="step-detail"><strong>90 segundos</strong><p>Check-in de energia, histórico e prontidão antes do primeiro movimento.</p></div>
+          </article>
+          <article class="method-step spotlight reveal" tabindex="0">
+            <div class="step-meta"><span>02</span><i data-lucide="sliders-horizontal"></i></div>
+            <div class="step-word">DOSAR</div>
+            <div class="step-detail"><strong>1 estímulo certo</strong><p>Carga, ritmo e amplitude ajustados pelo coach em tempo real.</p></div>
+          </article>
+          <article class="method-step spotlight reveal" tabindex="0">
+            <div class="step-meta"><span>03</span><i data-lucide="chart-no-axes-combined"></i></div>
+            <div class="step-word">EVOLUIR</div>
+            <div class="step-detail"><strong>Dados que fazem sentido</strong><p>Marcos objetivos, celebrações honestas e próximo passo sempre claro.</p></div>
+          </article>
+        </div>
+
+        <div class="method-statement reveal">
+          <p>“Se o treino ignora como você chegou, ele também ignora onde você pode chegar.”</p>
+          <div class="orbit-seal" aria-hidden="true"><span>PULSO · MÉTODO · PULSO ·</span><i data-lucide="activity"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section schedule" id="agenda" aria-labelledby="schedule-title">
+      <div class="section-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-header reveal-group">
+          <div>
+            <div class="eyebrow reveal-child"><span></span> 03 — Radar semanal</div>
+            <h2 id="schedule-title" class="reveal-child">Encontre sua<br><span class="outline">frequência.</span></h2>
+          </div>
+          <div class="schedule-live reveal-child"><span class="live-dot"></span><strong data-next-label>Próximo pulso em 12 min</strong><small>Studio 01 · Consolação</small></div>
+        </header>
+
+        <div class="day-selector reveal" role="tablist" aria-label="Escolha o dia da semana">
+          <button type="button" role="tab" data-day="seg"><small>16</small><span>Seg</span></button>
+          <button type="button" role="tab" data-day="ter"><small>17</small><span>Ter</span></button>
+          <button class="is-active" type="button" role="tab" aria-selected="true" data-day="qua"><small>18</small><span>Qua</span><i>Hoje</i></button>
+          <button type="button" role="tab" data-day="qui"><small>19</small><span>Qui</span></button>
+          <button type="button" role="tab" data-day="sex"><small>20</small><span>Sex</span></button>
+          <button type="button" role="tab" data-day="sab"><small>21</small><span>Sáb</span></button>
+        </div>
+
+        <div class="class-list reveal" aria-live="polite">
+          <article class="class-row spotlight" data-time="06:15" data-name="Ignite 45">
+            <span class="class-time">06:15</span>
+            <span class="class-type"><i data-lucide="zap"></i><span><strong>Ignite 45</strong><small>Condicionamento · Lia M.</small></span></span>
+            <span class="class-level"><i></i> Intenso</span>
+            <span class="class-capacity"><span><i style="--fill:72%"></i></span><small>4 vagas</small></span>
+            <button class="round-action" type="button" aria-label="Reservar Ignite 45 às 06:15" data-book data-class="Ignite 45" data-time="Quarta, 06:15"><i data-lucide="arrow-up-right"></i></button>
+          </article>
+          <article class="class-row spotlight" data-time="12:10" data-name="Foundry">
+            <span class="class-time">12:10</span>
+            <span class="class-type"><i data-lucide="dumbbell"></i><span><strong>Foundry</strong><small>Força total · Caio R.</small></span></span>
+            <span class="class-level level-orange"><i></i> Moderado</span>
+            <span class="class-capacity"><span><i style="--fill:48%"></i></span><small>8 vagas</small></span>
+            <button class="round-action" type="button" aria-label="Reservar Foundry às 12:10" data-book data-class="Foundry" data-time="Quarta, 12:10"><i data-lucide="arrow-up-right"></i></button>
+          </article>
+          <article class="class-row spotlight" data-time="18:30" data-name="Base bruta">
+            <span class="class-time">18:30</span>
+            <span class="class-type"><i data-lucide="activity"></i><span><strong>Base bruta</strong><small>Lower body · Nina V.</small></span></span>
+            <span class="class-level"><i></i> Intenso</span>
+            <span class="class-capacity"><span><i style="--fill:82%"></i></span><small>2 vagas</small></span>
+            <button class="round-action" type="button" aria-label="Reservar Base bruta às 18:30" data-book data-class="Base bruta" data-time="Quarta, 18:30"><i data-lucide="arrow-up-right"></i></button>
+          </article>
+          <article class="class-row spotlight" data-time="20:00" data-name="Reset flow">
+            <span class="class-time">20:00</span>
+            <span class="class-type"><i data-lucide="wind"></i><span><strong>Reset flow</strong><small>Mobilidade · Jo N.</small></span></span>
+            <span class="class-level level-mint"><i></i> Regenerativo</span>
+            <span class="class-capacity"><span><i style="--fill:35%"></i></span><small>11 vagas</small></span>
+            <button class="round-action" type="button" aria-label="Reservar Reset flow às 20:00" data-book data-class="Reset flow" data-time="Quarta, 20:00"><i data-lucide="arrow-up-right"></i></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community" aria-labelledby="community-title">
+      <div class="community-media" aria-hidden="true"><img src="assets/images/comunidade.webp" alt="" loading="lazy"></div>
+      <div class="community-overlay"></div>
+      <div class="container community-content">
+        <div class="eyebrow reveal"><span></span> 04 — Energia compartilhada</div>
+        <h2 id="community-title" class="reveal">Individual no dado.<br><span class="outline">Coletivo na energia.</span></h2>
+        <div class="community-grid reveal-group">
+          <blockquote class="reveal-child">“Aqui ninguém grita que você consegue. Eles mostram que você já está conseguindo.”<cite>Marina, PULSO 214</cite></blockquote>
+          <div class="community-stats reveal-child">
+            <span><strong data-count="1274">0</strong><small>pessoas em movimento</small></span>
+            <span><strong data-count="92">0</strong><small>% de consistência média</small></span>
+            <span><strong data-count="4">0</strong><small>studios conectados</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section plans" id="planos" aria-labelledby="plans-title">
+      <div class="container">
+        <header class="section-header reveal-group">
+          <div>
+            <div class="eyebrow reveal-child"><span></span> 05 — Seu ritmo</div>
+            <h2 id="plans-title" class="reveal-child">Compromisso sem<br><span class="gradient-text">piloto automático.</span></h2>
+          </div>
+          <p class="section-intro reveal-child">Ajuste sua frequência. A recomendação acompanha a sua rotina — não o contrário.</p>
+        </header>
+
+        <div class="plan-builder reveal">
+          <div class="frequency-panel">
+            <span class="mono">Frequência desejada</span>
+            <div class="frequency-output"><strong id="frequency-value">3</strong><span>vezes<br>por semana</span></div>
+            <input id="frequency-range" type="range" min="2" max="6" value="3" step="1" aria-label="Treinos por semana">
+            <div class="range-labels" aria-hidden="true"><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+            <p id="frequency-note">Ritmo ideal para construir consistência sem sobrecarregar a agenda.</p>
+          </div>
+          <article class="recommended-plan spotlight">
+            <div class="plan-top"><span class="status-badge"><i></i> Recomendado agora</span><span id="plan-code">RITMO / 03</span></div>
+            <div>
+              <p class="mono">Plano adaptativo</p>
+              <h3 id="plan-name">Ritmo 12</h3>
+            </div>
+            <ul>
+              <li><i data-lucide="check"></i><span id="plan-sessions">12 acessos por mês</span></li>
+              <li><i data-lucide="check"></i> Leitura PULSO e prescrição diária</li>
+              <li><i data-lucide="check"></i> Todas as modalidades e studios</li>
+              <li><i data-lucide="check"></i> 1 revisão mensal com coach</li>
+            </ul>
+            <div class="plan-price"><span>R$</span><strong id="plan-price">329</strong><small>/ mês</small></div>
+            <a class="button button-primary magnetic" href="#primeiro-pulso">Começar com 7 dias <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></a>
+            <small class="plan-footnote">Sem taxa de matrícula · pause quando precisar</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section first-pulse" id="primeiro-pulso" aria-labelledby="first-title">
+      <div class="cta-orbit" aria-hidden="true"></div>
+      <div class="container first-grid">
+        <div class="first-copy reveal">
+          <div class="eyebrow"><span></span> 06 — Primeira leitura</div>
+          <h2 id="first-title">Chegue como<br><span class="outline">você está.</span></h2>
+          <p>Em 45 minutos, um coach lê seu momento, conduz uma sessão e desenha seu primeiro ciclo. Sem compromisso. Sem discurso pronto.</p>
+          <div class="first-details">
+            <span><i data-lucide="clock-3"></i><small>Duração</small><strong>45 min</strong></span>
+            <span><i data-lucide="map-pin"></i><small>Unidade</small><strong>Consolação</strong></span>
+            <span><i data-lucide="ticket-check"></i><small>Investimento</small><strong>Cortesia</strong></span>
+          </div>
+        </div>
+        <form class="trial-form reveal" id="trial-form" novalidate>
+          <div class="form-head"><span class="mono">Solicitar convite</span><span>01 / 01</span></div>
+          <div class="field">
+            <input id="name" name="name" type="text" autocomplete="name" placeholder=" " required>
+            <label for="name">Como podemos chamar você?</label>
+            <small class="field-message">Digite seu nome.</small>
+          </div>
+          <div class="field">
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder=" " required>
+            <label for="phone">WhatsApp</label>
+            <small class="field-message">Informe um telefone válido.</small>
+          </div>
+          <div class="field select-field">
+            <select id="goal" name="goal" required>
+              <option value="" selected disabled></option>
+              <option>Ganhar força</option>
+              <option>Melhorar o fôlego</option>
+              <option>Recuperar mobilidade</option>
+              <option>Voltar a ter consistência</option>
+            </select>
+            <label for="goal">O que você quer sentir diferente?</label>
+            <i data-lucide="chevron-down"></i>
+            <small class="field-message">Escolha um objetivo.</small>
+          </div>
+          <button class="button button-primary magnetic" type="submit">Quero sentir meu primeiro PULSO <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></button>
+          <p class="form-privacy"><i data-lucide="lock-keyhole"></i> Seus dados só serão usados para combinar sua experiência.</p>
+          <div class="form-success" role="status" aria-live="polite">
+            <span><i data-lucide="check"></i></span><div><strong>Convite solicitado.</strong><p>Seu próximo movimento já começou. Falaremos com você pelo WhatsApp.</p></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a class="brand" href="#inicio"><span class="brand-mark"><span></span></span><span class="brand-name">PULSO</span></a>
+        <p>Treino que responde<br>à vida real.</p>
+        <a class="back-top" href="#inicio">Voltar ao topo <i data-lucide="arrow-up"></i></a>
+      </div>
+      <div class="footer-word" aria-hidden="true">PULSO</div>
+      <div class="footer-bottom"><span>© 2026 PULSO PERFORMANCE</span><span>SEG–SEX 05:30–23:00 · SÁB–DOM 08:00–18:00</span><span>SÃO PAULO / BR</span></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="booking-modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Fechar"><i data-lucide="x"></i></button>
+      <span class="status-badge"><i></i> Reserva expressa</span>
+      <p class="mono">Seu próximo pulso</p>
+      <h3 id="modal-title">Base bruta</h3>
+      <div class="modal-class-meta"><span><i data-lucide="calendar-days"></i><strong data-modal-time>Quarta, 18:30</strong></span><span><i data-lucide="map-pin"></i><strong>Studio 01 · Consolação</strong></span></div>
+      <p class="modal-copy">Deixe seu contato e seguramos a vaga por 15 minutos. Você confirma direto no WhatsApp.</p>
+      <form id="booking-form">
+        <div class="field"><input id="booking-phone" type="tel" inputmode="tel" placeholder=" " required><label for="booking-phone">Seu WhatsApp</label></div>
+        <button class="button button-primary" type="submit">Segurar minha vaga <i data-lucide="arrow-right"></i></button>
+      </form>
+      <p class="modal-success" role="status"><i data-lucide="check-circle-2"></i> Vaga separada. Te chamamos em instantes.</p>
+    </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite"><i data-lucide="sparkles"></i><span>Treino recalibrado.</span></div>
+  <script src="assets/js/lucide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
