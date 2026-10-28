@@ -324,28 +324,12 @@ document.addEventListener('DOMContentLoaded', () => {
     countItems.forEach((item) => countObserver.observe(item));
   } else countItems.forEach((item) => { item.textContent = Number(item.dataset.count).toLocaleString('pt-BR'); });
 
-  const plans = {
-    2: { name: 'Plano Básico', sessions: 'Musculação livre · 2x por semana', price: '99', note: 'Perfeito para quem está começando agora ou quer conciliar a academia com outros esportes.' },
-    3: { name: 'Plano Prata', sessions: 'Musculação + Aulas coletivas', price: '129', note: 'O equilíbrio perfeito para manter constância semanal com custo-benefício imbatível.' },
-    4: { name: 'Plano Ouro', sessions: 'Acesso total ilimitado à unidade', price: '149', note: 'Para quem quer treinar sem limites de dias ou horários, com todas as aulas inclusas.' },
-    5: { name: 'Plano Black', sessions: 'Acesso total + Avaliação periódica', price: '169', note: 'Nosso plano mais procurado: musculação, todas as aulas, bioimpedância e cadeira de massagem.' },
-    6: { name: 'Plano Black VIP', sessions: 'Acesso total + Amigo no fim de semana', price: '199', note: 'Treine todos os dias com benefícios VIP e traga 1 convidado todo sábado e domingo.' }
-  };
-  const range = document.getElementById('frequency-range');
-  const updatePlan = () => {
-    const value = Number(range.value);
-    const plan = plans[value];
-    range.style.setProperty('--range', `${((value - 2) / 4) * 100}%`);
-    document.getElementById('frequency-value').textContent = value;
-    document.getElementById('frequency-note').textContent = plan.note;
-    document.getElementById('plan-code').textContent = value < 5 ? `PLANO / 0${value}` : 'PLANO / VIP';
-    document.getElementById('plan-name').textContent = plan.name;
-    document.getElementById('plan-sessions').textContent = plan.sessions;
-    document.getElementById('plan-price').textContent = plan.price;
-  };
-  range.addEventListener('input', updatePlan);
-  range.addEventListener('change', () => showToast('Plano atualizado.'));
-  updatePlan();
+  document.querySelectorAll('[data-plan]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const planName = btn.dataset.plan;
+      showToast(`${planName} selecionado.`);
+    });
+  });
 
   document.querySelectorAll('select').forEach((select) => {
     const sync = () => select.closest('.select-field')?.classList.toggle('has-value', Boolean(select.value));

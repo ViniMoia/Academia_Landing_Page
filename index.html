@@ -268,30 +268,71 @@
           <p class="section-intro reveal-child">Escolha o plano perfeito para o seu bolso e a sua rotina. Treine musculação e faça aulas completas com cancelamento descomplicado.</p>
         </header>
 
-        <div class="plan-builder reveal">
-          <div class="frequency-panel">
-            <span class="mono">Frequência semanal desejada</span>
-            <div class="frequency-output"><strong id="frequency-value">3</strong><span>vezes<br>por semana</span></div>
-            <input id="frequency-range" type="range" min="2" max="6" value="3" step="1" aria-label="Treinos por semana">
-            <div class="range-labels" aria-hidden="true"><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
-            <p id="frequency-note">O equilíbrio perfeito para manter constância semanal com custo-benefício imbatível.</p>
-          </div>
-          <article class="recommended-plan spotlight">
-            <div class="plan-top"><span class="status-badge"><i></i> Mais escolhido</span><span id="plan-code">PLANO / 03</span></div>
-            <div>
-              <p class="mono">Plano mensal</p>
-              <h3 id="plan-name">Plano Prata</h3>
+        <div class="plans-grid reveal">
+          <!-- Plano 1: Start (R$ 119) -->
+          <article class="plan-card spotlight">
+            <div class="plan-top">
+              <span class="status-badge"><i></i> Econômico</span>
+              <span class="plan-code">PLANO / 01</span>
             </div>
-            <ul>
-              <li><i data-lucide="check"></i><span id="plan-sessions">Musculação + Aulas coletivas</span></li>
-              <li><i data-lucide="check"></i> Acesso livre a todo o maquinário de musculação e cardio</li>
-              <li><i data-lucide="check"></i> Grade de aulas inclusa (Spinning, FitDance, Pilates e mais)</li>
-              <li><i data-lucide="check"></i> App exclusivo com ficha de treino digital personalizada</li>
-              <li><i data-lucide="check"></i> Vestiários completos com duchas quentes e armários</li>
+            <div class="plan-head">
+              <p class="mono">Musculação & Cardio</p>
+              <h3 class="plan-name">Plano Start</h3>
+            </div>
+            <ul class="plan-features">
+              <li><i data-lucide="check"></i> Acesso livre à área de musculação e pesos livres</li>
+              <li><i data-lucide="check"></i> Setor cardio completo (esteiras, bikes e escadas)</li>
+              <li><i data-lucide="check"></i> Vestiários com duchas quentes e armários</li>
+              <li><i data-lucide="check"></i> Treino inicial montado pelos instrutores</li>
+              <li><i data-lucide="check"></i> Sem taxa de cancelamento abusiva</li>
             </ul>
-            <div class="plan-price"><span>R$</span><strong id="plan-price">129</strong><small>/ mês</small></div>
-            <a class="button button-primary magnetic" href="#primeiro-pulso">Garantir esta oferta <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></a>
+            <div class="plan-price"><span>R$</span><strong>119</strong><small>/ mês</small></div>
+            <a class="button button-outline magnetic" href="#primeiro-pulso" data-plan="Plano Start">Escolher Plano Start <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></a>
             <small class="plan-footnote">Sem taxa de matrícula · Cancele quando quiser</small>
+          </article>
+
+          <!-- Plano 2: Gold (R$ 149 - Destaque) -->
+          <article class="plan-card plan-featured spotlight">
+            <div class="plan-top">
+              <span class="status-badge status-featured"><i></i> Mais escolhido</span>
+              <span class="plan-code">PLANO / 02</span>
+            </div>
+            <div class="plan-head">
+              <p class="mono">Musculação + Todas as Aulas</p>
+              <h3 class="plan-name">Plano Gold</h3>
+            </div>
+            <ul class="plan-features">
+              <li><i data-lucide="check"></i> <strong>Tudo do Plano Start incluso</strong></li>
+              <li><i data-lucide="check"></i> Grade completa de aulas coletivas ilimitada</li>
+              <li><i data-lucide="check"></i> Spinning, FitDance, Pilates solo e GAP</li>
+              <li><i data-lucide="check"></i> App exclusivo com ficha digital e vídeos</li>
+              <li><i data-lucide="check"></i> Suporte e acompanhamento contínuo no salão</li>
+            </ul>
+            <div class="plan-price"><span>R$</span><strong>149</strong><small>/ mês</small></div>
+            <a class="button button-primary magnetic" href="#primeiro-pulso" data-plan="Plano Gold">Garantir Oferta Gold <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></a>
+            <small class="plan-footnote">Melhor custo-benefício · Sem taxa de matrícula</small>
+          </article>
+
+          <!-- Plano 3: Black VIP (R$ 189) -->
+          <article class="plan-card spotlight">
+            <div class="plan-top">
+              <span class="status-badge"><i></i> Experiência VIP</span>
+              <span class="plan-code">PLANO / 03</span>
+            </div>
+            <div class="plan-head">
+              <p class="mono">Acesso Total & Benefícios</p>
+              <h3 class="plan-name">Plano Black VIP</h3>
+            </div>
+            <ul class="plan-features">
+              <li><i data-lucide="check"></i> <strong>Tudo do Plano Gold incluso</strong></li>
+              <li><i data-lucide="check"></i> Avaliação física com bioimpedância periódica</li>
+              <li><i data-lucide="check"></i> Poltrona de massagem relaxante pós-treino</li>
+              <li><i data-lucide="check"></i> 1 convidado grátis todo sábado e domingo</li>
+              <li><i data-lucide="check"></i> Camiseta exclusiva BESTFIT de boas-vindas</li>
+            </ul>
+            <div class="plan-price"><span>R$</span><strong>189</strong><small>/ mês</small></div>
+            <a class="button button-outline magnetic" href="#primeiro-pulso" data-plan="Plano Black VIP">Escolher Black VIP <span class="button-icon"><i data-lucide="arrow-up-right"></i></span></a>
+            <small class="plan-footnote">Acesso livre total · Cancele quando quiser</small>
           </article>
         </div>
       </div>
