@@ -186,22 +186,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const prescriptions = {
     potencia: {
-      image: 'assets/images/forca.avif', alt: 'Atleta em treino de força', code: 'PWR / 45',
-      label: 'Força / Lower body', title: 'Base bruta.',
-      description: 'Movimentos compostos, carga guiada e pausas precisas para construir força sem desperdiçar energia.',
-      duration: '45 min', intensity: 'Alta', spots: '06', time: 'Hoje, 18:30'
+      image: 'assets/images/forca.avif', alt: 'Área de musculação e pesos livres na academia', code: 'FIT / MUSCULAÇÃO',
+      label: 'Setor de Força & Hipertrofia', title: 'Musculação de Ponta.',
+      description: 'Equipamentos biomecânicos de última geração, halteres até 50kg, anilhas olímpicas e instrutores sempre no salão para montar seu treino e acompanhar sua postura.',
+      duration: 'Livre', intensity: 'Todos', spots: 'No salão', time: 'Hoje, Horário Livre'
     },
     folego: {
-      image: 'assets/images/hiit.avif', alt: 'Atleta em treino de condicionamento', code: 'IGN / 38',
-      label: 'Condicionamento / Intervalado', title: 'Pulso alto.',
-      description: 'Blocos progressivos de cardio e potência que elevam o ritmo sem perder controle ou técnica.',
-      duration: '38 min', intensity: 'Variável', spots: '04', time: 'Hoje, 19:15'
+      image: 'assets/images/hiit.avif', alt: 'Área de cardio com esteiras e elípticos', code: 'FIT / CARDIO',
+      label: 'Setor Cardio & Queima Calórica', title: 'Cardio & Funcional.',
+      description: 'Linha completa de esteiras com TV, escadas ergométricas, bikes e espaço funcional amplo para queimar calorias, emagrecer e turbinar seu fôlego.',
+      duration: 'Livre', intensity: 'Variável', spots: '+40 aparelhos', time: 'Hoje, Horário Livre'
     },
     fluxo: {
-      image: 'assets/images/mobilidade.avif', alt: 'Pessoa praticando mobilidade', code: 'FLW / 50',
-      label: 'Mobilidade / Recovery', title: 'Espaço no corpo.',
-      description: 'Respiração, amplitude e estabilidade para recuperar movimento e transformar tensão em presença.',
-      duration: '50 min', intensity: 'Leve', spots: '09', time: 'Hoje, 20:00'
+      image: 'assets/images/mobilidade.avif', alt: 'Alunos em sala de aula coletiva e alongamento', code: 'FIT / COLETIVAS',
+      label: 'Salas de Ginástica & Ritmos', title: 'Aulas Coletivas Inclusas.',
+      description: 'Spinning, FitDance, Jump, Pilates solo, GAP e Alongamento. Aulas dinâmicas com professores que motivam você do início ao fim.',
+      duration: '45-60 min', intensity: 'Moderada', spots: 'Grade diária', time: 'Hoje, Grade Completa'
     }
   };
   const prescriptionCard = document.getElementById('prescription-card');
@@ -241,19 +241,19 @@ document.addEventListener('DOMContentLoaded', () => {
         prescriptionImage.style.opacity = '1';
         prescriptionCard.style.transform = '';
       }, reduceMotion ? 0 : 220);
-      showToast('Treino recalibrado.');
+      showToast('Espaço selecionado.');
     });
   });
 
   const dayButtons = [...document.querySelectorAll('.day-selector button')];
   const weekday = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
   const scheduleSets = [
-    [['06:00','Foundry','Força total · Caio R.','Moderado','6 vagas','58%'],['12:15','Pulse run','Cardio · Lia M.','Intenso','3 vagas','78%'],['18:00','Prime lift','Upper body · Nina V.','Intenso','5 vagas','68%'],['20:10','Reset flow','Mobilidade · Jo N.','Regenerativo','12 vagas','30%']],
-    [['06:30','Engine','Condicionamento · Lia M.','Intenso','4 vagas','74%'],['11:45','Base bruta','Lower body · Nina V.','Intenso','7 vagas','55%'],['18:45','Foundry','Força total · Caio R.','Moderado','2 vagas','86%'],['20:15','Breath lab','Recovery · Jo N.','Regenerativo','10 vagas','38%']],
-    [['06:15','Ignite 45','Condicionamento · Lia M.','Intenso','4 vagas','72%'],['12:10','Foundry','Força total · Caio R.','Moderado','8 vagas','48%'],['18:30','Base bruta','Lower body · Nina V.','Intenso','2 vagas','82%'],['20:00','Reset flow','Mobilidade · Jo N.','Regenerativo','11 vagas','35%']],
-    [['06:10','Prime lift','Upper body · Nina V.','Moderado','8 vagas','46%'],['12:00','Ignite 38','HIIT · Lia M.','Intenso','5 vagas','64%'],['19:00','Engine','Condicionamento · Caio R.','Intenso','1 vaga','92%'],['20:20','Flow down','Mobilidade · Jo N.','Regenerativo','14 vagas','20%']],
-    [['06:20','Foundry','Força total · Caio R.','Moderado','7 vagas','52%'],['12:20','Pulse run','Cardio · Lia M.','Intenso','6 vagas','61%'],['18:20','Power hour','Potência · Nina V.','Intenso','3 vagas','76%'],['19:45','Reset flow','Mobilidade · Jo N.','Regenerativo','9 vagas','43%']],
-    [['08:00','Long engine','Resistência · Lia M.','Moderado','5 vagas','67%'],['09:30','Base bruta','Lower body · Caio R.','Intenso','4 vagas','72%'],['11:00','Mobility lab','Mobilidade · Jo N.','Regenerativo','10 vagas','39%'],['12:15','Team pulse','Misto · Nina V.','Moderado','2 vagas','84%']]
+    [['06:30','Spinning / Bike','Sala Cardio · Prof. Thiago','Intenso','8 vagas','60%'],['09:00','Pilates Solo','Sala 02 · Profa. Mariana','Regenerativo','12 vagas','40%'],['18:30','FitDance & Ritmos','Sala 01 · Prof. Lucas','Intenso','5 vagas','80%'],['19:30','GAP & Glúteos','Sala 02 · Profa. Camila','Moderado','10 vagas','50%']],
+    [['07:00','Circuito Funcional','Área Funcional · Prof. Carlos','Intenso','6 vagas','70%'],['12:15','Alongamento & Flex','Sala 02 · Profa. Mariana','Regenerativo','14 vagas','30%'],['18:15','Spinning Extreme','Sala Cardio · Prof. Thiago','Intenso','4 vagas','85%'],['20:00','Muay Thai / Luta','Tatame · Prof. Rodrigo','Intenso','7 vagas','65%']],
+    [['06:30','Spinning Power','Sala Cardio · Prof. Thiago','Intenso','6 vagas','72%'],['09:30','Localizada & Core','Sala 01 · Profa. Camila','Moderado','9 vagas','52%'],['18:30','FitDance Explosão','Sala 01 · Prof. Lucas','Intenso','3 vagas','88%'],['19:45','Yoga & Respiração','Sala 02 · Profa. Mariana','Regenerativo','11 vagas','35%']],
+    [['07:00','HIIT Funcional','Área Funcional · Prof. Carlos','Intenso','5 vagas','75%'],['12:10','GAP & Abdômen','Sala 02 · Profa. Camila','Moderado','8 vagas','48%'],['18:30','Spinning / Bike','Sala Cardio · Prof. Thiago','Intenso','4 vagas','82%'],['20:00','Jiu-Jitsu / Luta','Tatame · Prof. Rodrigo','Intenso','6 vagas','60%']],
+    [['06:30','Spinning Sexta','Sala Cardio · Prof. Thiago','Intenso','7 vagas','55%'],['12:15','Circuito Express','Área Funcional · Prof. Carlos','Moderado','8 vagas','45%'],['18:00','FitDance Sextou','Sala 01 · Prof. Lucas','Intenso','4 vagas','80%'],['19:15','Alongamento Geral','Sala 02 · Profa. Mariana','Regenerativo','12 vagas','35%']],
+    [['08:30','Super Spinning','Sala Cardio · Prof. Thiago','Intenso','5 vagas','75%'],['09:30','FitDance Weekend','Sala 01 · Prof. Lucas','Intenso','6 vagas','70%'],['10:30','Funcional em Duplas','Área Funcional · Prof. Carlos','Moderado','8 vagas','60%'],['11:30','Pilates & Relax','Sala 02 · Profa. Mariana','Regenerativo','10 vagas','40%']]
   ];
   const today = new Date();
   dayButtons.forEach((button, index) => {
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const book = row.querySelector('[data-book]');
         book.dataset.class = data[1];
         book.dataset.time = `${dayButtons[index].querySelector('span').textContent}, ${data[0]}`;
-        book.setAttribute('aria-label', `Reservar ${data[1]} às ${data[0]}`);
+        book.setAttribute('aria-label', `Reservar vaga em ${data[1]} às ${data[0]}`);
       });
       classList.classList.remove('is-switching');
     }, reduceMotion ? 0 : 180);
@@ -325,11 +325,11 @@ document.addEventListener('DOMContentLoaded', () => {
   } else countItems.forEach((item) => { item.textContent = Number(item.dataset.count).toLocaleString('pt-BR'); });
 
   const plans = {
-    2: { name: 'Ritmo 08', sessions: '8 acessos por mês', price: '259', note: 'Espaço suficiente para o treino conviver com uma rotina que está começando.' },
-    3: { name: 'Ritmo 12', sessions: '12 acessos por mês', price: '329', note: 'Ritmo ideal para construir consistência sem sobrecarregar a agenda.' },
-    4: { name: 'Ritmo 16', sessions: '16 acessos por mês', price: '389', note: 'Frequência sólida para alternar força, fôlego e recuperação toda semana.' },
-    5: { name: 'BESTFIT Livre', sessions: 'Acesso livre mensal', price: '449', note: 'Alta frequência com liberdade para recalibrar a sessão todos os dias.' },
-    6: { name: 'BESTFIT Livre+', sessions: 'Acesso livre + 1 convidado', price: '519', note: 'Para quem transformou movimento em parte essencial da própria rotina.' }
+    2: { name: 'Plano Básico', sessions: 'Musculação livre · 2x por semana', price: '99', note: 'Perfeito para quem está começando agora ou quer conciliar a academia com outros esportes.' },
+    3: { name: 'Plano Prata', sessions: 'Musculação + Aulas coletivas', price: '129', note: 'O equilíbrio perfeito para manter constância semanal com custo-benefício imbatível.' },
+    4: { name: 'Plano Ouro', sessions: 'Acesso total ilimitado à unidade', price: '149', note: 'Para quem quer treinar sem limites de dias ou horários, com todas as aulas inclusas.' },
+    5: { name: 'Plano Black', sessions: 'Acesso total + Avaliação periódica', price: '169', note: 'Nosso plano mais procurado: musculação, todas as aulas, bioimpedância e cadeira de massagem.' },
+    6: { name: 'Plano Black VIP', sessions: 'Acesso total + Amigo no fim de semana', price: '199', note: 'Treine todos os dias com benefícios VIP e traga 1 convidado todo sábado e domingo.' }
   };
   const range = document.getElementById('frequency-range');
   const updatePlan = () => {
@@ -338,13 +338,13 @@ document.addEventListener('DOMContentLoaded', () => {
     range.style.setProperty('--range', `${((value - 2) / 4) * 100}%`);
     document.getElementById('frequency-value').textContent = value;
     document.getElementById('frequency-note').textContent = plan.note;
-    document.getElementById('plan-code').textContent = value < 5 ? `RITMO / ${String(value).padStart(2, '0')}` : 'BESTFIT / ∞';
+    document.getElementById('plan-code').textContent = value < 5 ? `PLANO / 0${value}` : 'PLANO / VIP';
     document.getElementById('plan-name').textContent = plan.name;
     document.getElementById('plan-sessions').textContent = plan.sessions;
     document.getElementById('plan-price').textContent = plan.price;
   };
   range.addEventListener('input', updatePlan);
-  range.addEventListener('change', () => showToast('Plano ajustado ao seu ritmo.'));
+  range.addEventListener('change', () => showToast('Plano atualizado.'));
   updatePlan();
 
   document.querySelectorAll('select').forEach((select) => {
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (valid) {
       trialForm.classList.add('is-success');
-      showToast('Primeira experiência BESTFIT solicitada.');
+      showToast('Free Pass solicitado com sucesso!');
     } else trialForm.querySelector('.is-invalid input, .is-invalid select')?.focus();
   });
   trialForm.querySelectorAll('input, select').forEach((field) => field.addEventListener('input', () => field.closest('.field').classList.remove('is-invalid')));
