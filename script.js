@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-plan]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const planName = btn.dataset.plan;
-      showToast(`${planName} selecionado.`);
+      showToast(`Abrindo WhatsApp para o ${planName}...`);
     });
   });
 
