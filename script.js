@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-plan]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const planName = btn.dataset.plan;
-      showToast(`Abrindo WhatsApp para o ${planName}...`);
+      showToast(`Abrindo WhatsApp da GLFIT para o ${planName}...`);
     });
   });
 
@@ -358,7 +358,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     if (valid) {
       trialForm.classList.add('is-success');
-      showToast('Free Pass solicitado com sucesso!');
+      showToast('Free Pass solicitado com sucesso na GLFIT!');
+      const name = document.getElementById('name')?.value.trim() || '';
+      const goal = document.getElementById('goal')?.value.trim() || '';
+      const text = encodeURIComponent(`Olá! Me chamo ${name} e acabei de solicitar meu Free Pass de 1 dia grátis no site da GLFIT.${goal ? ` Meu objetivo principal é: ${goal}.` : ''}`);
+      window.setTimeout(() => {
+        window.open(`https://wa.me/55091992410531?text=${text}`, '_blank');
+      }, 1000);
     } else trialForm.querySelector('.is-invalid input, .is-invalid select')?.focus();
   });
   trialForm.querySelectorAll('input, select').forEach((field) => field.addEventListener('input', () => field.closest('.field').classList.remove('is-invalid')));
@@ -397,6 +403,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     phone.removeAttribute('aria-invalid');
     dialog.classList.add('is-success');
+    showToast('Vaga pré-reservada na GLFIT!');
+    const className = modalTitle.textContent.trim();
+    const classSchedule = modalTime.textContent.trim();
+    const text = encodeURIComponent(`Olá! Solicitei a reserva da aula de ${className} (${classSchedule}) no site da GLFIT e gostaria de confirmar minha presença.`);
+    window.setTimeout(() => {
+      window.open(`https://wa.me/55091992410531?text=${text}`, '_blank');
+    }, 1000);
   });
   document.addEventListener('keydown', (event) => {
     if (!modal.classList.contains('is-open')) return;
